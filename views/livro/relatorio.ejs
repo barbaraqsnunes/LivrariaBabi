@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/menu') %>
+    <%- include('../partials/rodape') %>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <% if (status == 1) { %>
+        <div class ="alert alert-success">
+            Livro cadrastrado com <b>sucesso</b>✔
+        </div>
+    <%}%>
+    <h1>Relatório dos livros cadastrados⬎</h1>
+    <ul>
+    <% livros.forEach(livro => { %>
+    <div><strong>Titulo:</strong> <%= livro.titulo %></div>
+    <div><strong>Autor:</strong> <%= livro.autor %></div>
+    <div><strong>Isbn:</strong> <%= livro.isbn %></div>
+    <div><strong>categoria:</strong> <%= livro.categoria %></div>
+    <div><strong>Status:</strong> <%= livro.status %></div>
+    <hr>
+    <% });%>
+    </ul>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

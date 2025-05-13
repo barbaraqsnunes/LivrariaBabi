@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/menu') %>
+    <%- include('../partials/rodape') %>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <% if (status == 1) { %>
+        <div class ="alert alert-success">
+            Reserva cadrastrado com <b>sucesso</b>✔
+        </div>
+    <%}%>
+    <h1>Relatório das reservas⬎</h1>
+    <ul>
+    <% reservas.forEach(reserva => { %>
+    <div><strong>Cliente:</strong> <%= reserva.cliente %></div>
+    <div><strong>Livro:</strong> <%= reserva.livro %></div>
+    <div><strong>Data da reserva:</strong> <%= reserva.data %></div>
+    <div><strong>Data de devolução:</strong> <%= reserva.dataDevolucao %></div>
+    <div><strong>Status:</strong> <%= reserva.status %></div>
+    <div><strong>Observação:</strong> <%= reserva.observacao %></div>
+    <div><a href="/reservas/<%= reserva._id %>">Detalhar</a></div>
+    <div><a href="/reservas/editar/<%= reserva._id %>">Editar</a></div>
+    <hr>
+    <% });%>
+    </ul>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

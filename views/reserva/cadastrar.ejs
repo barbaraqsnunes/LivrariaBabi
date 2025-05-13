@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/rodape') %>
+    <%- include('../partials/menu') %>
+    <div>
+        <h1>Cadastrar Reserva</h1>
+        <p>Preencha os campos abaixo para cadastrar uma nova reserva.</p>
+        <p1>Os campos com * são obrigatórios.</p1><br>
+        <p2>Após o cadastro, você será redirecionado para a página de reservas.</p2>
+        <form action="/reservas" method="POST">
+
+            <div>
+                <label for="txtLivro" class="form-label">Livro*:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtLivro" name="livro">
+            </div>
+            <div>
+                <label for="txtCliente" class="form-label">Cliente*:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtCliente" name="cliente">
+            </div>
+            <div>
+                <label for="txtDataDevolucao" class="form-label">Data de Devolução*:</label>
+                <input type="date" style="width: auto;" class="form-control" id="txtDataDevolucao" name="dataDevolucao">
+            <div>
+                <label for="txtData" class="form-label">Data*:</label>
+                <input type="date" style="width: auto;" class="form-control" id="txtData" name="data">
+            </div>
+            <div>
+                <label for="txtStatus" class="form-label">Status*:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtStatus" name="status">
+            </div>
+            <div>
+                <label for="txtObservacao" class="form-label">Observação:</label>
+                <textarea style="width: auto;" class="form-control" id="txtObservacao" name="observacao"></textarea>
+            </div>
+            <br>
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+            <button type="button" onclick="window.location.href='/clientes'">⇇ Voltar</button>
+        </form>
+    </div>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

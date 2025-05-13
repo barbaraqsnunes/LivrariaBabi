@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/rodape') %>
+    <%- include('../partials/menu') %>
+    <h1>Detalhes da Reserva</h1>
+    <div>
+        Livro: <b><%= reserva.livro %></b>
+    </div>
+    <div>
+        Cliente: <b><%= reserva.cliente %></b>
+    </div> 
+    <div>
+        Data da Reserva: <b><%= reserva.data %></b>
+    </div>
+    <div>
+        Data de Devolução: <b><%= reserva.devolucao %></b>
+    </div>
+    <div>
+        Status: <b><%= reserva.status %></b>
+    </div>
+    <div>
+        Observação: <b><%= reserva.observacao %></b>
+    </div>
+    <div>
+        <a href="/reservas/<%= reserva.livro %>/deletar">Deletar</a>
+    </div>
+        <a href="/reservas">⇇ Voltar</a>
+    </div>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

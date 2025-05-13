@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/rodape') %>
+    <%- include('../partials/menu') %>
+    <div>
+        <h2>Cadastrar Cliente</h2>
+        <p>Preencha os campos abaixo para cadastrar um novo cliente.</p>
+        <p1>Os campos com <b>*</b> são obrigatórios.</p1>
+        <form action="/clientes" method="POST">
+            <div>
+                <label for="txtId" class="form-label">Id*:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtId" name="id">
+            </div>
+            <div>
+                <label for="txtNome" class="form-label">Nome*:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtNome" name="nome">
+            </div>
+            <div>
+                <label for="txtEmail" class="form-label">Email*:</label>
+                <input type="email" style="width: 400px;" class="form-control" id="txtEmail" name="email">
+            </div>
+            <div>
+                <label for="txtTelefone" class="form-label">Telefone*:</label>
+                <input type="text" style="width: 400px;" class="form-control" id="txtTelefone" name="telefone">
+            </div>
+            <div>
+                <label for="txtEndereco" class="form-label">Endereço*:</label>
+                <input type="text" style="width: 400px;" class="form-control" id="txtEndereco" name="endereco">
+            </div>
+            <br>
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+            <button type="button" onclick="window.location.href='/clientes'">⇇ Voltar</button>
+        </form>
+    </div>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

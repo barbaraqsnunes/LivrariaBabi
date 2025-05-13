@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/rodape') %>
+    <%- include('../partials/menu') %>
+    <h1>Detalhes do Cliente</h1>
+    <div>
+        Id: <b><%= cliente.id %></b>
+    </div>
+    <div>
+        Nome: <b><%= cliente.nome %></b>
+    </div>
+    <div>
+        Email: <b><%= cliente.email %></b>
+    </div>
+    <div>
+        Telefone: <b><%= cliente.telefone %></b>
+    </div>
+    <div>
+        Endereço: <b><%= cliente.endereço %></b>
+    </div>
+        <a href="/clientes">⇇ Voltar</a>
+    </div>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

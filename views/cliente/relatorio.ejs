@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/menu') %>
+    <%- include('../partials/rodape') %>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <% if (status == 1) { %>
+        <div class ="alert alert-success">
+            Cadrastrado com <b>sucesso</b>✔
+        </div>
+    <%}%>
+    <h1>Relatório dos clientes⬎</h1>
+    <ul>
+    <% clientes.forEach(cliente => { %> 
+    <div><strong>Id:</strong> <%= cliente.id %></div>
+    <div><strong>Nome:</strong> <%= cliente.nome %></div>
+    <div><strong>Telefone:</strong> <%= cliente.telefone %></div>
+    <div><strong>Email:</strong> <%= cliente.email %></div>
+    <div><strong>Endereço:</strong> <%= cliente.endereço %></div>
+    <div><a href="/clientes/<%= cliente.nome%>">Detalhar</a></div>
+    <hr>
+    <% });%>
+    </ul>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/cabecalho') %>
+    <%- include('../partials/rodape') %>
+    <%- include('../partials/menu') %>
+    <div>
+        <h2>Cadastrar Livros</h2>
+        <p>Preencha os campos abaixo para cadastrar um novo livro.</p>
+        <p1>Após o cadastro, você poderá visualizar a lista de livros cadastrados.</p1>
+        <form action="/livros/" method="POST">
+            <div>
+                <label for="txtId" class="form-label">ID:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtId" name="id">
+            </div>
+            <div>
+                <label for="txtTitulo" class="form-label">Titulo:</label>
+                <input type="text" style="width: auto;" class="form-control" id="txtTitulo" name="titulo">
+            </div>
+            <div>
+                <label for="txtAutor" class="form-label">Autor:</label>
+                <input type="nome" style="width: 400px;" class="form-control" id="txtAutor" name="autor">
+            </div>
+            <div>
+                <label for="txtIsbn" class="form-label">Isbn:</label>
+                <input type="text" style="width: 400px;" class="form-control" id="txtIsbn" name="isbn">
+            </div>
+            <div>
+                <label for="txtCategoria" class="form-label">Categoria:</label>
+                <input type="text" style="width: 400px;" class="form-control" id="txtCategoria" name="categoria">
+            </div>
+            <div>
+                <label for="txtStatus" class="form-label">Status:</label>
+                <input type="text" style="width: 400px;" class="form-control" id="txtStatus" name="status">
+            </div>
+            <br>
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+            <button type="button" onclick="window.location.href='/livros'">⇇ Voltar</button>
+        </form>
+    </div>
+</body>
+<footer>
+    <%- include('../partials/rodape') %>
+</footer>
+</html>

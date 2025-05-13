@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O labirinto dos livros</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/cabecalho') %>
+    <%- include('partials/rodape') %>
+    <%- include('partials/menu') %>
+    <h1>Bem-vindo à nossa página inicial!</h1>
+    <p>Você está no site <b>O labirinto dos livros.</b></p>
+    <p1>Você pode navegar pelas opções abaixo:</p1><br>
+    <p2>livros⬎</p2>
+    <div>
+        <a href="/livros/cadastrar">Cadastro de livros</a>
+    </div>
+    <div>
+        <a href="/livros">Listagem de livros</a>
+    </div>
+    <p2>clientes⬎</p2>
+    <div>
+        <a href="/clientes/cadastrar">Cadastro de clientes</a>
+    </div>
+    <div>
+        <a href="/clientes">Listagem de clientes</a>
+    </div>
+    <p2>reservas⬎</p2>
+    <div>
+        <a href="/reservas/cadastrar">Cadastro de reservas</a>
+    </div>
+    <div>
+        <a href="/reservas">Listagem de reservas</a>
+    </div>
+</body>
+<footer>
+    <%- include('partials/rodape') %>
+</footer>
+</html>
